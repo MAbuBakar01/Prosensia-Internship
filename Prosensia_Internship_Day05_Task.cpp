@@ -2,12 +2,16 @@
 #include<iostream>
 using namespace std;
 int factorial( int num );
-void max(int a, int b, int c);
+int max(int a, int b, int c);
 //====================Main Function========================
 int main(){
-	
+	int f,a,b,c;
+cout<<"Enter a number: ";
+cin>>f;
+cout<<"\nEnter three Numbers: ";
+cin>>a>>b>>c;	
 cout<<	factorial(5)<<endl;
-max(13, 5, 87);
+cout<<"Max Function result is: "<<max(a,b,c);
 	return 0 ;
 }
 //==================functions definition===========================
@@ -19,19 +23,35 @@ int factorial( int num ){
 	cout<<"Factorial of "<<num<<" is ";
 	return fact;
 }
-
-void max(int a, int b, int c){
+//=======Max Function==============
+int max(int a, int b, int c){
 	if(a>b){
 		if(a>c){
-			cout<<a<<" is greatest among "<<a<<" "<<b<<" and "<<c<<endl;
+		
+			return a;
 		}
 	}
 	if(b>a){
 		if(b>c){
-		cout<<b<<" is greatest among "<<a<<" "<<b<<" and "<<c<<endl;
+			return b;
+		
 		}
 	}
+	if(a==b==c){
+		return 0;
+	}
+	if(a==b ){
+	
+	return a+b;
+}
+  if(a==c){
+	return a+c;
+}
+ if(b==c){
+	return b+c;
+}
 	else{
-		cout<<c<<" is greatest among "<<a<<" "<<b<<" and "<<c<<endl;
+		return c;
+		
 	}
 }
